@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: gainsboro;
+}
+.main{
+    padding-top: 100px;
+}
+.container{
+    width:  100%;
+    padding: 50px;
+    background: white;
+    align-items: center;
+    justify-content: center;
+}
+/*Navigation Bar Starts*/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    padding: 10px 20px;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.6); 
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+.navbar-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-list li{
+    list-style: none;
+    padding: 0 10px;
+    position: relative;
+}
+.navbar-list li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.2s ease-in-out;
+}
+.navbar-list li a:hover,
+.navbar-list li a.active {
+    color: red;
+}
+.navbar-list li a:hover::after,
+.navbar-list li a.active::after{
+    content: "";
+    background-color: red;
+    width: 30%;
+    height: 2px;
+    position:absolute;
+    bottom: -4px;
+    left: 20px;
+}
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/*Navigation Bar Ends*/
+/*Image profile*/
+.image-profile{
+    justify-items: flex-end;
+    text-align: center;
+}
+.view-button{
+    padding: 10px 0;
+}
+.view-profile-btn{
+    background: white;
+    border: 1px solid red;
+    width: 250px;
+    height: 50px;
+    color: red;
+    cursor: pointer;
+    transition: 0.6s;
+}
+.view-profile-btn:hover{
+    background: red;
+    color: white;
+}
+/*Image profile Ends*/
+.doctor-details{
+    justify-items: flex-end;
+    text-align: center;
+    padding-top: 100px;
+}
+.doctor-heading{
+    color: red;
+}
+.footer {
+    background: black;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    top: 40px;
+    max-width: 100%;
+}

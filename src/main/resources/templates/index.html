@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubuntu Connect</title>
+
+    <!-- primary meta tags-->
+    <meta name="title" content="Ubuntu Connect">
+    <meta name="description" content="Your healthcare lifeline">
+
+    <!-- favicon-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!--Google font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+    <!-- custom css link-->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Preload images-->
+    <link rel="preload" as="image" href="./assets/hero-bg.png">
+    <link rel="preload" as="image" href="./assets/images/happpy-patient-nurse.jpg">
+</head>
+
+<body id="top">
+    <!--Preloader-->
+    <div class="preloader" data-preloader>
+        <div class="circle"></div>
+    </div>
+
+    <!--Header-->
+    <header class="header active" data-header>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./assets/images/logo.png" width="136" height="46" alt="Ubuntu Connect">
+            </a>
+
+            <nav class="navbar" data-navbar>
+                <div class="navbar-top">
+                    <a href="#" class="logo">
+                        <img src="./assets/images/logo.png" width="136" height="46" alt="Ubuntu-Connect">
+                    </a>
+                    <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                        <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                </div>
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link title-md">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="/doctors" class="navbar-link title-md">Doctors</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link title-md">Services</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link title-md">Blog</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="/appointment" class="navbar-link title-md">Make an appointment</a>
+                    </li>
+                </ul>
+                <ul class="social-list">
+                    <li>
+                        <a href="#" class="social-link">
+                            <img src="./assets/images/logo-twitterx.png" alt="twitter">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link">
+                            <img src="./assets/images/logo-facebook.png" alt="facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                            <i name="logo-instagram"></i>
+                            <img src="./assets/images/logo-youtube.png" alt="youtube">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link">
+                            
+                            <img src="./assets/images/logo-instagram.png" alt="instagram">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+
+            <a href="#" class="btn has-before title-md">Download</a>
+
+            <div class="overlay active" data-nav-toggler data-overlay></div>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <!--Hero section-->
+            <section class="section hero" style="background-image: url('./assets/images/hero-bg.png')" aria-label="home">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="headline-lg hero-title" data-reveal="left">
+                            Ubuntu-Connect
+                        </h1>
+                        <p class="hero-subtitle" has-before data-reveal="right">
+                            Find quality healthcare services at the snap of your fingers. Get 
+                            virtual consultations, prescription and medicine delivered at the
+                            comfort of your own home.
+                        </p>
+
+                        <div class="hero-card" data-reveal="left">
+                            <p class="title-lg card-text">
+                                Search doctors, hospitals, labs, etc.
+                            </p>
+                            <!--Search button-->
+                        <form action="/search" method="post">
+                            <div class="wrapper">
+                                <div class="input-wrapper title-lg">
+                                    <input type="text" name="search" placeholder="Speciality,Facility,Procedure" class="input field">
+                                    <ion-icon name="search"></ion-icon>
+                                </div>
+
+                                <button class="btn has-before">
+                                    <!--Download search and location b-->
+                                    <ion-icon name="search"></ion-icon>
+                                    <span class="span title-md">Search</span>
+                                </button>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+
+                    <figure class="hero-banner" data-reveal="right">
+                        <img src="./assets/images/happpy-patient-nurse.jpg" width="590" height="517" loading="eager" alt="hero-banner"
+                         class="w-100">
+                    </figure>
+                </div>
+
+            </section>
+            <!---
+             #About
+         -->
+         
+
+         <!--#LISTING-->
+
+         <section class="section listing" aria-labelledby="listing-label">
+            <div class="container">
+                <ul class="grid-list">
+                    <li>
+                        <p class="section-subtitle title-lg" id="listing-label" 
+                        data-reveal="left">Doctors Listing</p>
+                        <h2 class="headline-md" data-reveal="left">Browse by Specialist</h2>
+                    </li>
+                    <li>
+                        <div class="listing-card" data-reveal="bottom">
+                            <div class="card-icon">
+                                <img src="./assets/images/psychiatry.png" width="55" height="55" 
+                                loading="lazy" alt="icon">
+                            </div>
+                            <div>
+                                <h3 class="headline-sm card-title">Psychiatry</h3>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+         </section>
+
+         <!--Footer Starts-->
+    <div class="footer">
+        <p>&copy; 2024 Ubuntu Connect. All rights reserved.</p>
+    </div>
+    <!--Footer Starts Ends-->
+            
+        </article>
+    </main>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

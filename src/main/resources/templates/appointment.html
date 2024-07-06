@@ -123,7 +123,7 @@
     <div class="container1 text-center">
         <div class="row">
             <div class="col">
-                <select name="city">
+                <select name="city" required=""/>
                     <option value="">City</option>
                     <option value="Pretoria">Pretoria</option>
                     <option value="Johannesburg">Johanessburg</option>
@@ -131,10 +131,10 @@
                 </select>
             </div>
             <div class="col order-5">
-                <input type="date" class="date" name = "date"/>
+                <input type="date" class="date" name = "date" required=""/>
             </div>
             <div class="col order-1">
-                <select name="hospital">
+                <select name="hospital" required=""/>
                     <option value="">Hospital</option>
                     <option value="Kalafong Hospital">Kalafong Hospital</option>
                     <option value="Lous Parscher Hospital">Lous Parscher Hospital</option>
@@ -153,7 +153,7 @@
                         <label for="name" class="name-label">First Name</label>
                     </td>
                     <td>
-                        <input type="text" class="name-input" name="firstname" placeholder="Enter First Name">
+                        <input type="text" class="name-input" name="firstname" placeholder="Enter First Name" required=""/>
                     </td>
                 </tr>
                 <tr>
@@ -161,7 +161,7 @@
                         <label for="name" class="name-label">Last Name</label>
                     </td>
                     <td>
-                        <input type="text" class="name-input" name="lastname" placeholder="Enter Last Name">
+                        <input type="text" class="name-input" name="lastname" placeholder="Enter Last Name" required=""/>
                     </td>
                 </tr>
                 <tr>
@@ -169,7 +169,7 @@
                         <label for="name" class="name-label">Email</label>
                     </td>
                     <td>
-                        <input type="email" class="name-input" name="email" placeholder="Enter Email">
+                        <input type="email" class="name-input" name="email" placeholder="Enter Email" required=""/>
                     </td>
                 </tr>
                 <tr>
@@ -177,7 +177,7 @@
                         <label for="name" class="name-label">Phone Number</label>
                     </td>
                     <td>
-                        <input type="tel" class="name-input"  name="phonenumber">
+                        <input type="tel" class="name-input"  name="phonenumber" required=""/>
                     </td>
                 </tr>
                 <tr>
@@ -185,16 +185,22 @@
                         <label for="name" class="name-label">Choose Time</label>
                     </td>
                     <td>
-                        <input type="time" class="name-input time"  name="time"   pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                        <input type="time" class="name-input time"  name="time"   pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required=""/>
                     </td>
                 </tr>
                 <tr>
                     <td>Doctor Name</td>
-                    <td><input type="text" name="doctorname" class ="name-input" placeholder="Enter doctor name" /></td>
+                    <td>
+                        <select name="doctorname" class="name-input" required="">
+                            <option value="" disabled selected>Select a doctor</option>
+                            <option th:each="p : ${doctors}" th:value="${p.doctorName}" th:text="${p.doctorName}"></option>
+                        </select>
+                </td>
                 </tr>
                 <tr >
                     <td colspan="3" class="button-col"><button type="submit" class="book-appointment">Book Appointment</button></td>
                 </tr>
+                
             </table>
         </div>
     </div>

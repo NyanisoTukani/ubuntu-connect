@@ -49,12 +49,20 @@ public class UbuntuConnectController {
     
 
     @PostMapping("/search")
-    public String searchDoctor(@RequestParam("search") String doctorname,Model model) {
-        Doctor doc = new Doctor();
-        doc = doctorService.getDoctor(doctorname);
-        model.addAttribute("doctor", doc);
-        return "search-doctor";
-    }
+    public String searchDoctor(@RequestParam("search") String doctorname, Model model) {
+        try {
+            Doctor doc = doctorService.getDoctor(doctorname);
+            if (doc == null) {
+                throw new Exception("Please fill in");
+            }
+            model.addAttribute("doctor", doc);
+            return "search-doctor";
+        } catch (Exception e) {
+            model.addAttribute("error", "Doctor not found");
+            return "index";
+        }
+}
+
     
     
     @GetMapping("/appointment")
@@ -63,6 +71,8 @@ public class UbuntuConnectController {
         model.addAttribute("doctors", doctors);
         return  "appointment";
     }
+
+    
 
     
     @GetMapping("/adddoctor")

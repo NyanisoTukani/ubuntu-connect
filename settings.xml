@@ -1,0 +1,21 @@
+<settings>
+  <mirrors>
+    <mirror>
+      <id>central</id>
+      <mirrorOf>central</mirrorOf>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </mirror>
+  </mirrors>
+  <profiles>
+    <profile>
+      <id>default</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <maven.wagon.http.connectionTimeout>10000</maven.wagon.http.connectionTimeout>
+        <maven.wagon.http.readTimeout>60000</maven.wagon.http.readTimeout>
+      </properties>
+    </profile>
+  </profiles>
+</settings>

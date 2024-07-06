@@ -122,20 +122,21 @@
                                 Search doctors, hospitals, labs, etc.
                             </p>
                             <!--Search button-->
-                        <form action="/search" method="post">
-                            <div class="wrapper">
-                                <div class="input-wrapper title-lg">
-                                    <input type="text" name="search" placeholder="Speciality,Facility,Procedure" class="input field">
-                                    <ion-icon name="search"></ion-icon>
+                            <form action="/search" method="post">
+                                <div class="wrapper">
+                                    <div class="input-wrapper title-lg">
+                                        <input type="text" name="search" placeholder="Speciality, Facility, Procedure" class="input field">
+                                        <ion-icon name="search"></ion-icon>
+                                    </div>
+                                    <button class="btn has-before">
+                                        <ion-icon name="search"></ion-icon>
+                                        <span class="span title-md">Search</span>
+                                    </button>
                                 </div>
-
-                                <button class="btn has-before">
-                                    <!--Download search and location b-->
-                                    <ion-icon name="search"></ion-icon>
-                                    <span class="span title-md">Search</span>
-                                </button>
-                            </div>
-                        </form>
+                                <div class="error">
+                                    <p th:text="${error}"></p>
+                                </div>
+                            </form>
                         </div>
                     </div>
 
